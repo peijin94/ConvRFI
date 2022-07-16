@@ -78,7 +78,7 @@ class RFIconv(nn.Module):
         y = (  torch.sum(self.conv3_bool(torch.heaviside(self.conv3(x),dum0)),dim=1,keepdim=True)
             +  torch.sum(self.conv5_bool(torch.heaviside(torch.heaviside(self.conv5(x),dum0)-torch.heaviside(F.conv2d(torch.heaviside(self.conv3(x),dum0),
             torch.ones([2,1,5,5]).to(self.device),bias=None,stride=1,padding=2,groups=2),dum0).repeat_interleave(2,dim=1),dum0))
-            ,dim=1,keepdim=True) )>1e-5
+            ,dim=1,keepdim=True) )>1e-7
         return y
 
 """
@@ -156,7 +156,7 @@ def init_RFIconv(net,aggressive_factor = [1.6,1.65,0.5,0.5],device='cpu'):
     
     net.load_state_dict(state_dict)
 
-    return net
+    return net.to(device)
 
 
 

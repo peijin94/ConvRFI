@@ -9,12 +9,14 @@ __pycache__/
 
 # figures
 fig/
+
 *.png
 *.gif
 *.jpg
 *.jpeg
 *.bmp
 *.tiff
+
 *.pdf
 
 
