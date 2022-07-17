@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-# for RFI flagging v1
 
+# for RFI flagging v1
 class Net(nn.Module):
 
     def __init__(self):
