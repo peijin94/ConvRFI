@@ -65,6 +65,9 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
+benchmark_res/
+*.lprof
+
 # Translations
 *.mo
 *.pot
