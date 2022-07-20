@@ -1,7 +1,7 @@
 import os
 
-t_flag_range = 100000
-chunk_len_lst = [1000,2000,5000,10000,20000]
+t_flag_range = 320000
+chunk_len_lst = [1000,2000,4000,8000,16000,32000]
 device_lst = ['cpu','cuda']
 
 import sys
