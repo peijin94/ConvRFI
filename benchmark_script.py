@@ -1,8 +1,8 @@
 import os
 
 t_flag_range = 320000
-chunk_len_lst = [1000,2000,4000,8000,16000,32000]
-device_lst = ['cpu','cuda']
+chunk_len_lst = [8000,16000,32000]
+device_lst = ['cpu']
 
 import sys
 this_dir = os.getcwd()

@@ -8,13 +8,15 @@ import h5py
 if platform.system()=='Windows':
     h5dir = 'D://H5/'
 else:
-    h5dir = './H5/'
+    h5dir = '../H5/'
 
 h5_fname = 'L860566_SAP000_B000_S0_P000_bf.h5'
 import sys
 this_dir = os.getcwd()
 sys.path.append(this_dir)
 work_dir = this_dir
+
+torch.set_num_threads(128)
 
 os.chdir(work_dir) # go back home
 os.chdir(h5dir)
@@ -28,8 +30,6 @@ f = h5py.File( h5_fname, 'r' )
 
 device ='cpu'
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
-
-
 
 
 from argparse import ArgumentParser
